@@ -3,9 +3,36 @@
   %head
     %meta{charset: "utf-8"}
     %title= "#{@item[:title]} - Alexander Danilenko"
-    %link{rel: "stylesheet", type: "text/css", href: "/style.css", media: "screen"}
-    %meta{name: "generator", content: "nanoc <%= Nanoc::VERSION %>"}
+    = stylesheet_link_tag "bootstrap", "application", "bootstrap-responsive"
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{src: "/javascripts/bootstrap-collapse.js"}
+    %meta{name: "generator", content: "nanoc #{Nanoc::VERSION}"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
   %body
-    #main
-      = yield
-    #sidebar
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          %a.btn.btn-navbar{data: {toggle: "collapse", target: ".nav-collapse"}}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{href: "/"} Alexander Danilenko
+          .nav-collapse
+            %ul.nav
+              = top_nav_item "Blog", "/"
+              = top_nav_item "About", "/about/"
+    .container-fluid
+      .row-fluid
+        .span9
+          .page-header
+            %h1= @item[:title]
+          = yield
+        .span3
+          .well.sidebar-nav
+            %ul.nav.nav-list
+              %li.nav-header Recent Posts
+              - @site.sorted_articles.each do |post|
+                %li{class: ("active" if @item == post)}= link_to post[:title], post.path
+      %hr/
+      %footer
+        %p &copy; 2012 Alexander Danilenko
