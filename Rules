@@ -53,6 +53,10 @@ route '/blog/feed' do
   '/blog/feed.xml'
 end
 
+route '/404/' do
+  '/404.html'
+end
+
 route '*' do
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
