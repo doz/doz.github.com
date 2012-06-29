@@ -14,11 +14,12 @@
 #   because “*” matches zero or more characters.
 
 compile '/stylesheets/*/' do
-  # don’t filter or layout
 end
 
 compile '/javascripts/*/' do
-  # don’t filter or layout
+end
+
+compile '/support/*/' do
 end
 
 compile '/blog/feed' do
@@ -47,6 +48,10 @@ end
 
 route '/javascripts/*/' do
   "#{item.identifier[0..-2]}.js"
+end
+
+route '/support/*/' do
+  "/.#{item.identifier.split('/').last}"
 end
 
 route '/blog/feed' do
