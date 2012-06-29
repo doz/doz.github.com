@@ -17,17 +17,32 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile 'blog/feed' do
+  filter :erb
+end
+
+compile '/blog/*/' do
+  filter :haml
+  layout 'blog'
+  snapshot :body
+  layout 'default'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    filter :haml
     layout 'default'
   end
 end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+route 'blog/feed' do
+  '/blog/feed.xml'
 end
 
 route '*' do
@@ -40,4 +55,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :haml
