@@ -1,0 +1,15 @@
+@import "bootstrap-journal.min.css.scss";
+
+body {
+  padding-top: 100px;
+}
+
+.sidebar-nav {
+  padding: 9px 0;
+}
+.page-header, .post-header {
+  .label {
+    float: right;
+    margin-top: 12px
+  }
+}

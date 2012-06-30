@@ -3,5 +3,7 @@ title: Blog
 ---
 
 - @site.sorted_articles.each do |post|
-  %h2= link_to post[:title], post.path
+  .post-header
+    %span.label= post[:created_at]
+    %h2= link_to post[:title], post.path
   = post.compiled_content(snapshot: :body)

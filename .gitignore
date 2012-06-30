@@ -1,3 +1,4 @@
 .rvmrc
 crash.log
 tmp
+.sass-cache
