@@ -3882,13 +3882,3 @@ code, pre, pre.prettyprint, .well {
 
 .invisible {
   visibility: hidden; }
-
-body {
-  padding-top: 100px; }
-
-.sidebar-nav {
-  padding: 9px 0; }
-
-.page-header .label, .post-header .label {
-  float: right;
-  margin-top: 12px; }
