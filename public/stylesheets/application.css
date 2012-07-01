@@ -3901,9 +3901,11 @@ body {
     float: left;
     margin-right: 10px; }
 
-.page-header .label, .post-header .label {
-  float: right;
-  margin-top: 12px; }
+.post-info {
+  margin: 5px 0 15px 0; }
+  .post-info .comments-count {
+    color: #999;
+    font-size: 12px; }
 
 [class^="icon-"], [class*=" icon-"] {
   margin: 0 3px 1px 0; }

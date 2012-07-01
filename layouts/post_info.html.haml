@@ -1,0 +1,4 @@
+- if post[:kind] == "article"
+  %p.post-info
+    %span.label= post[:created_at]
+    = link_to "", "#{post.path}#disqus_thread", class: "comments-count"

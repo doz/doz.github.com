@@ -24,10 +24,11 @@ body {
   }
 }
 
-.page-header, .post-header {
-  .label {
-    float: right;
-    margin-top: 12px
+.post-info {
+  margin: 5px 0 15px 0;
+  .comments-count {
+    color: #999;
+    font-size: 12px;
   }
 }
 

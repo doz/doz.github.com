@@ -4,7 +4,6 @@ kind: blog
 ---
 
 - @site.sorted_articles.each do |post|
-  .post-header
-    %span.label= post[:created_at]
-    %h2= link_to post[:title], post.path
+  %h2= link_to post[:title], post.path
+  = render "post_info", post: post
   = post.compiled_content(snapshot: :body)

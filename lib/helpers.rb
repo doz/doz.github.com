@@ -7,3 +7,7 @@ def stylesheet_link_tag(*names)
     %{<link rel="stylesheet" type="text/css" href="/stylesheets/#{name}.css" media="screen" />}
   end.join("\n")
 end
+
+def blog?
+  %w{blog article}.include?(@item[:kind])
+end

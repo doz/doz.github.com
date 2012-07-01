@@ -26,9 +26,8 @@
         .span9
           - if @item[:title]
             .page-header
-              - if @item[:created_at]
-                %span.label= @item[:created_at]
               %h1= @item[:title]
+              = render "post_info", post: @item
           = yield
         .span3
           .well.sidebar-about
@@ -40,7 +39,7 @@
               = link_to("toptal.com", "http://toptal.com")
               with 5 years of Ruby on Rails experience preceded by enterprise
               development and dev teams management.
-          - if %w{blog article}.include?(@item[:kind])
+          - if blog?
             .well.sidebar-nav
               %ul.nav.nav-list
                 %li.nav-header Recent Posts
@@ -54,3 +53,5 @@
           = link_to('<i class="icon-facebook"></i>', "https://www.facebook.com/alexander.danilenko", title: "Facebook")
           = link_to('<i class="icon-github"></i>', "https://github.com/doz", title: "github")
         %p &copy; 2012 Alexander Danilenko
+    - if blog?
+      = render "vendor/disqus_count"
