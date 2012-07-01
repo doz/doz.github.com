@@ -1197,7 +1197,7 @@ table .span24 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("/images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat; }
 
@@ -1205,7 +1205,7 @@ table .span24 {
   *margin-left: 0; }
 
 .icon-white {
-  background-image: url("../img/glyphicons-halflings-white.png"); }
+  background-image: url("/images/glyphicons-halflings-white.png"); }
 
 .icon-glass {
   background-position: 0 0; }
@@ -3889,6 +3889,42 @@ body {
 .sidebar-nav {
   padding: 9px 0; }
 
+.sidebar-about {
+  position: relative;
+  overflow: hidden;
+  padding: 9px 15px; }
+  .sidebar-about .nav {
+    margin: 0; }
+    .sidebar-about .nav .nav-header {
+      padding: 3px 0; }
+  .sidebar-about img {
+    float: left;
+    margin-right: 10px; }
+
 .page-header .label, .post-header .label {
   float: right;
   margin-top: 12px; }
+
+[class^="icon-"], [class*=" icon-"] {
+  margin: 0 3px 1px 0; }
+
+.icon-linkedin, .icon-skype, .icon-facebook, .icon-twitter, .icon-github {
+  background-image: url("/images/icons.png"); }
+
+.icon-linkedin {
+  background-position: 0 0; }
+
+.icon-skype {
+  background-position: -14px 0; }
+
+.icon-facebook {
+  background-position: -28px 0; }
+
+.icon-twitter {
+  background-position: -42px 0; }
+
+.icon-github {
+  background-position: -56px 0; }
+
+footer .social {
+  float: right; }

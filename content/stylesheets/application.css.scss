@@ -7,9 +7,40 @@ body {
 .sidebar-nav {
   padding: 9px 0;
 }
+
+.sidebar-about {
+  position: relative;
+  overflow: hidden;
+  padding: 9px 15px;
+  .nav {
+    margin: 0;
+    .nav-header {
+      padding: 3px 0;
+    }
+  }
+  img {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
 .page-header, .post-header {
   .label {
     float: right;
     margin-top: 12px
+  }
+}
+
+[class^="icon-"],[class*=" icon-"] { margin: 0 3px 1px 0; }
+.icon-linkedin, .icon-skype, .icon-facebook, .icon-twitter, .icon-github { background-image: url("/images/icons.png"); }
+.icon-linkedin { background-position: 0 0; }
+.icon-skype { background-position: -14px 0; }
+.icon-facebook { background-position: -2*14px 0; }
+.icon-twitter { background-position: -3*14px 0; }
+.icon-github { background-position: -4*14px 0; }
+
+footer {
+  .social {
+    float: right;
   }
 }

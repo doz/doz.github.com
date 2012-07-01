@@ -47,11 +47,11 @@ compile '*' do
 end
 
 route '/stylesheets/*/' do
-  "#{item.identifier[0..-2]}.css"
+  "#{item.identifier.chop}.css"
 end
 
 route '/javascripts/*/' do
-  "#{item.identifier[0..-2]}.js"
+  "#{item.identifier.chop}.js"
 end
 
 route '/support/*/' do
