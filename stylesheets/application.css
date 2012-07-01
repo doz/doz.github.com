@@ -486,47 +486,6 @@ small {
 cite {
   font-style: normal; }
 
-code, pre {
-  padding: 0 3px 2px;
-  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-  font-size: 13px;
-  color: #333333;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px; }
-
-code {
-  padding: 2px 4px;
-  color: #d14;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8; }
-
-pre {
-  display: block;
-  padding: 8.5px;
-  margin: 0 0 9px;
-  font-size: 12.950000000000001px;
-  line-height: 18px;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
-  white-space: pre-wrap;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px; }
-
-pre.prettyprint {
-  margin-bottom: 18px; }
-
-pre code {
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border: 0; }
-
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll; }
@@ -1197,7 +1156,7 @@ table .span24 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("/images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat; }
 
@@ -1205,7 +1164,7 @@ table .span24 {
   *margin-left: 0; }
 
 .icon-white {
-  background-image: url("../img/glyphicons-halflings-white.png"); }
+  background-image: url("/images/glyphicons-halflings-white.png"); }
 
 .icon-glass {
   background-position: 0 0; }
@@ -3851,7 +3810,7 @@ div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover
   box-shadow: none;
   border-top: none; }
 
-code, pre, pre.prettyprint, .well {
+.well {
   background-color: #eeeeee; }
 
 .hero-unit {
@@ -3883,12 +3842,295 @@ code, pre, pre.prettyprint, .well {
 .invisible {
   visibility: hidden; }
 
+table.CodeRay {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 2px; }
+  table.CodeRay td {
+    padding: 2px 4px;
+    vertical-align: top; }
+  table.CodeRay pre {
+    margin: 0px; }
+  table.CodeRay .line-numbers {
+    background-color: #d5f6f6;
+    color: gray;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+  table.CodeRay .line-numbers a {
+    background-color: #d5f6f6 !important;
+    color: gray !important;
+    text-decoration: none !important; }
+  table.CodeRay .line-numbers a:target {
+    color: blue !important; }
+  table.CodeRay .line-numbers .highlighted {
+    color: red !important; }
+  table.CodeRay .line-numbers .highlighted a {
+    color: red !important; }
+  table.CodeRay span.line-numbers {
+    padding: 0px 4px; }
+  table.CodeRay .line {
+    display: block;
+    float: left;
+    width: 100%; }
+  table.CodeRay .code {
+    width: 100%; }
+  table.CodeRay .debug {
+    color: white !important;
+    background: blue !important; }
+  table.CodeRay .annotation {
+    color: #007; }
+  table.CodeRay .attribute-name {
+    color: #b48; }
+  table.CodeRay .attribute-value {
+    color: #700; }
+  table.CodeRay .binary {
+    color: #509; }
+  table.CodeRay .char .content {
+    color: #D20; }
+  table.CodeRay .char .delimiter {
+    color: #710; }
+  table.CodeRay .char {
+    color: #D20; }
+  table.CodeRay .class {
+    color: #B06;
+    font-weight: bold; }
+  table.CodeRay .class-variable {
+    color: #369; }
+  table.CodeRay .color {
+    color: #0A0; }
+  table.CodeRay .comment {
+    color: #777; }
+  table.CodeRay .comment .char {
+    color: #444; }
+  table.CodeRay .comment .delimiter {
+    color: #444; }
+  table.CodeRay .complex {
+    color: #A08; }
+  table.CodeRay .constant {
+    color: #036;
+    font-weight: bold; }
+  table.CodeRay .decorator {
+    color: #B0B; }
+  table.CodeRay .definition {
+    color: #099;
+    font-weight: bold; }
+  table.CodeRay .delimiter {
+    color: black; }
+  table.CodeRay .directive {
+    color: #088;
+    font-weight: bold; }
+  table.CodeRay .doc {
+    color: #970; }
+  table.CodeRay .doc-string {
+    color: #D42;
+    font-weight: bold; }
+  table.CodeRay .doctype {
+    color: #34b; }
+  table.CodeRay .entity {
+    color: #800;
+    font-weight: bold; }
+  table.CodeRay .error {
+    color: #F00;
+    background-color: #FAA; }
+  table.CodeRay .escape {
+    color: #666; }
+  table.CodeRay .exception {
+    color: #C00;
+    font-weight: bold; }
+  table.CodeRay .float {
+    color: #60E; }
+  table.CodeRay .function {
+    color: #06B;
+    font-weight: bold; }
+  table.CodeRay .global-variable {
+    color: #d70; }
+  table.CodeRay .hex {
+    color: #02b; }
+  table.CodeRay .imaginary {
+    color: #f00; }
+  table.CodeRay .include {
+    color: #B44;
+    font-weight: bold; }
+  table.CodeRay .inline {
+    background-color: rgba(0, 0, 0, 0.07);
+    color: black; }
+  table.CodeRay .inline-delimiter {
+    font-weight: bold;
+    color: #666; }
+  table.CodeRay .instance-variable {
+    color: #33B; }
+  table.CodeRay .integer {
+    color: #00D; }
+  table.CodeRay .key .char {
+    color: #60f; }
+  table.CodeRay .key .delimiter {
+    color: #404; }
+  table.CodeRay .key {
+    color: #606; }
+  table.CodeRay .keyword {
+    color: #080;
+    font-weight: bold; }
+  table.CodeRay .label {
+    color: #970;
+    font-weight: bold; }
+  table.CodeRay .local-variable {
+    color: #963; }
+  table.CodeRay .namespace {
+    color: #707;
+    font-weight: bold; }
+  table.CodeRay .octal {
+    color: #40E; }
+  table.CodeRay .predefined {
+    color: #369;
+    font-weight: bold; }
+  table.CodeRay .predefined-constant {
+    color: #069; }
+  table.CodeRay .predefined-type {
+    color: #0a5;
+    font-weight: bold; }
+  table.CodeRay .preprocessor {
+    color: #579; }
+  table.CodeRay .pseudo-class {
+    color: #00C;
+    font-weight: bold; }
+  table.CodeRay .regexp .content {
+    color: #808; }
+  table.CodeRay .regexp .delimiter {
+    color: #404; }
+  table.CodeRay .regexp .modifier {
+    color: #C2C; }
+  table.CodeRay .regexp {
+    background-color: rgba(255, 0, 255, 0.06); }
+  table.CodeRay .reserved {
+    color: #080;
+    font-weight: bold; }
+  table.CodeRay .shell .content {
+    color: #2B2; }
+  table.CodeRay .shell .delimiter {
+    color: #161; }
+  table.CodeRay .shell {
+    background-color: rgba(0, 255, 0, 0.06); }
+  table.CodeRay .string .char {
+    color: #b0b; }
+  table.CodeRay .string .content {
+    color: #D20; }
+  table.CodeRay .string .delimiter {
+    color: #710; }
+  table.CodeRay .string .modifier {
+    color: #E40; }
+  table.CodeRay .string {
+    background-color: rgba(255, 0, 0, 0.05); }
+  table.CodeRay .symbol .content {
+    color: #A60; }
+  table.CodeRay .symbol .delimiter {
+    color: #630; }
+  table.CodeRay .symbol {
+    color: #A60; }
+  table.CodeRay .tag {
+    color: #070; }
+  table.CodeRay .type {
+    color: #339;
+    font-weight: bold; }
+  table.CodeRay .value {
+    color: #088; }
+  table.CodeRay .variable {
+    color: #037; }
+  table.CodeRay .insert {
+    background: rgba(0, 255, 0, 0.12); }
+  table.CodeRay .delete {
+    background: rgba(255, 0, 0, 0.12); }
+  table.CodeRay .change {
+    color: #bbf;
+    background: #007; }
+  table.CodeRay .head {
+    color: #f8f;
+    background: #505; }
+  table.CodeRay .head .filename {
+    color: white; }
+  table.CodeRay .delete .eyecatcher {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(230, 0, 0, 0.5);
+    margin: -1px;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  table.CodeRay .insert .eyecatcher {
+    background-color: rgba(0, 255, 0, 0.2);
+    border: 1px solid rgba(0, 128, 0, 0.5);
+    margin: -1px;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  table.CodeRay .insert .insert {
+    color: #0c0;
+    background: transparent;
+    font-weight: bold; }
+  table.CodeRay .delete .delete {
+    color: #c00;
+    background: transparent;
+    font-weight: bold; }
+  table.CodeRay .change .change {
+    color: #88f; }
+  table.CodeRay .head .head {
+    color: #f4f; }
+
 body {
   padding-top: 100px; }
 
 .sidebar-nav {
   padding: 9px 0; }
 
-.page-header .label, .post-header .label {
-  float: right;
-  margin-top: 12px; }
+.sidebar-about {
+  position: relative;
+  overflow: hidden;
+  padding: 9px 15px; }
+  .sidebar-about .nav {
+    margin: 0; }
+    .sidebar-about .nav .nav-header {
+      padding: 3px 0; }
+  .sidebar-about img {
+    float: left;
+    margin-right: 10px; }
+
+.subtitle {
+  color: #999;
+  font-weight: normal;
+  font-size: 16px; }
+
+.page-header .subtitle {
+  font-size: 18px; }
+
+.post-info {
+  margin: 5px 0 15px 0; }
+  .post-info .comments-count {
+    color: #999;
+    font-size: 12px; }
+
+pre.well {
+  padding: 0; }
+
+[class^="icon-"], [class*=" icon-"] {
+  margin: 0 3px 1px 0; }
+
+.icon-linkedin, .icon-skype, .icon-facebook, .icon-twitter, .icon-github {
+  background-image: url("/images/icons.png"); }
+
+.icon-linkedin {
+  background-position: 0 0; }
+
+.icon-skype {
+  background-position: -14px 0; }
+
+.icon-facebook {
+  background-position: -28px 0; }
+
+.icon-twitter {
+  background-position: -42px 0; }
+
+.icon-github {
+  background-position: -56px 0; }
+
+footer .social {
+  float: right; }
