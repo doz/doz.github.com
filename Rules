@@ -32,6 +32,7 @@ end
 
 compile '/blog/*/' do
   filter :haml
+  filter :colorize_syntax, colorizers: {ruby: :coderay}, coderay: {line_numbers: :table}
   snapshot :body
   layout 'blog'
   layout 'default'

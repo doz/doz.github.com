@@ -28,6 +28,8 @@
           - if @item[:title] && !@item[:hide_title]
             .page-header
               %h1= @item[:title]
+              - if @item[:subtitle]
+                %h2.subtitle= @item[:subtitle]
               = render "post_info", post: @item
           = yield
         .span3
