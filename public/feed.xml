@@ -23,7 +23,26 @@
     <published>2012-06-28T20:00:00Z</published>
     <updated>2012-06-28T20:00:00Z</updated>
     <link rel="alternate" href="http://danilenko.org/2012/6/29/rails_timezones/"/>
-    <content type="html">&lt;p&gt;Historically Ruby has two classes to manage time:&lt;/p&gt;
+    <content type="html">&lt;p&gt;
+  Ruby and Rails provide great tools for working with time and time zones.
+  But my experience shows that Rails developers often pay little attention to how this magic really works,
+  and this results in "ghost" problems that arise in particular configuration and time.
+  The main gotcha for developer is that you can use "wrong" methods and, in particular circumstances
+  (fairly often), get valid results. But then you'll face with unexpected problems on production.
+&lt;/p&gt;
+&lt;p&gt;
+  Historically Ruby provides two classes to manage time:
+  &lt;code&gt;&lt;a href="http://www.ruby-doc.org/core-1.9.3/Time.html"&gt;Time&lt;/a&gt;&lt;/code&gt;
+and
+&lt;code&gt;&lt;a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html"&gt;DateTime&lt;/a&gt;&lt;/code&gt;.
+  They use different approaches internally, which caused
+  &lt;a href="http://stackoverflow.com/questions/1261329/whats-the-difference-between-datetime-and-time-in-ruby"&gt;different abilities and performance for them&lt;/a&gt;.
+  But with Ruby 1.9.3 these differences vanished and you are free to choose whatever interface you like.
+  But that's in Ruby! When it comes to Rails things get more complicated.
+&lt;/p&gt;
+&lt;p&gt;
+  Rails...
+&lt;/p&gt;
 &lt;pre class="well"&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
 &lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;

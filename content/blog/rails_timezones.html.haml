@@ -5,8 +5,25 @@ title: The Exhaustive Guide to Rails Time Zones
 subtitle: Or what is the difference between Time.zone.now and Time.now
 ---
 
-%p Historically Ruby has two classes to manage time:
-
+%p
+  Ruby and Rails provide great tools for working with time and time zones.
+  But my experience shows that Rails developers often pay little attention to how this magic really works,
+  and this results in "ghost" problems that arise in particular configuration and time.
+  The main gotcha for developer is that you can use "wrong" methods and, in particular circumstances
+  (fairly often), get valid results. But then you'll face with unexpected problems on production.
+%p
+  Historically Ruby provides two classes to manage time:
+  = succeed "." do
+    %code= link_to("Time", "http://www.ruby-doc.org/core-1.9.3/Time.html")
+    and
+    %code= link_to("DateTime", "http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html")
+  They use different approaches internally, which caused
+  = succeed "." do
+    = link_to("different abilities and performance for them", "http://stackoverflow.com/questions/1261329/whats-the-difference-between-datetime-and-time-in-ruby")
+  But with Ruby 1.9.3 these differences vanished and you are free to choose whatever interface you like.
+  But that's in Ruby! When it comes to Rails things get more complicated.
+%p
+  Rails...
 %pre.well
   %code.language-ruby
     Time.zone.now
