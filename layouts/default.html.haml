@@ -2,7 +2,7 @@
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}
-    %title= "#{@item[:title]} - Alexander Danilenko"
+    %title= [@item[:title], "Alexander Danilenko"].compact.join(" - ")
     = stylesheet_link_tag "application", "bootstrap-responsive"
     %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
     %script{src: "/javascripts/bootstrap-collapse.js"}
@@ -24,7 +24,7 @@
     .container-fluid
       .row-fluid
         .span9
-          - if @item[:title]
+          - if @item[:title] && !@item[:hide_title]
             .page-header
               %h1= @item[:title]
               = render "post_info", post: @item
