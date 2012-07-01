@@ -26,7 +26,7 @@ end
 compile '/vendor/*/' do
 end
 
-compile '/blog/feed' do
+compile '/blog/feed/' do
   filter :erb
 end
 
@@ -62,8 +62,13 @@ route '/vendor/*/' do
   nil
 end
 
-route '/blog/feed' do
-  '/blog/feed.xml'
+route '/blog/feed/' do
+  '/feed.xml'
+end
+
+route '/blog/*/' do
+  date = Date.parse(item[:created_at])
+  item.identifier.sub('/blog/', "/#{date.year}/#{date.month}/#{date.day}/") + 'index.html'
 end
 
 route '/404/' do
