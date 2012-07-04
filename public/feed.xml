@@ -2,21 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://danilenko.org/</id>
   <title>Danilenko.org</title>
-  <updated>2012-06-29T20:00:00Z</updated>
+  <updated>2012-06-28T20:00:00Z</updated>
   <link rel="alternate" href="http://danilenko.org/"/>
   <link rel="self" href="http://danilenko.org/feed.xml"/>
   <author>
     <name>Alexander Danilenko</name>
     <uri>http://danilenko.org</uri>
   </author>
-  <entry>
-    <id>tag:danilenko.org,2012-06-30:/2012/6/30/attr_ability/</id>
-    <title type="html">AttrAbility</title>
-    <published>2012-06-29T20:00:00Z</published>
-    <updated>2012-06-29T20:00:00Z</updated>
-    <link rel="alternate" href="http://danilenko.org/2012/6/30/attr_ability/"/>
-    <content type="html">&lt;p&gt;hello world&lt;/p&gt;</content>
-  </entry>
   <entry>
     <id>tag:danilenko.org,2012-06-29:/2012/6/29/rails_timezones/</id>
     <title type="html">The Exhaustive Guide to Rails Time Zones</title>

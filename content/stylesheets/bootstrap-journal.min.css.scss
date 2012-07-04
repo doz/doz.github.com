@@ -710,7 +710,7 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 h1,h2,h3,h4,h5,h6,.navbar .brand{font-weight:700;}
 a{text-decoration:underline;}
 .nav a,.navbar .brand,.subnav a,a.btn,.dropdown-menu a{text-decoration:none;}
-.navbar .navbar-inner{-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);border-top:1px solid #E5E5E5;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.navbar .navbar-inner{-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);border-top:1px solid #E5E5E5;border-bottom:1px solid #CCCCCC;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .navbar .brand{text-shadow:none;}.navbar .brand:hover{background-color:#EEEEEE;}
 .navbar .navbar-text{line-height:68px;}
 .navbar .nav>li>a{text-shadow:none;}
