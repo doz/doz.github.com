@@ -10,7 +10,7 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %link{rel: "alternate", type: "application/rss+xml", title: "Danilenko.org", href: "http://danilenko.org/feed.xml"}
   %body
-    .navbar.navbar-fixed-top
+    .navbar
       .navbar-inner
         .container-fluid
           %a.btn.btn-navbar{data: {toggle: "collapse", target: ".nav-collapse"}}
@@ -45,7 +45,7 @@
           - if blog?
             .well.sidebar-nav
               %ul.nav.nav-list
-                %li.nav-header Recent Posts
+                %li.nav-header Blog Posts
                 - @site.sorted_articles.each do |post|
                   %li= link_to post[:title], post.path
       %hr/
