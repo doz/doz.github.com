@@ -2,3 +2,4 @@
 crash.log
 tmp
 .sass-cache
+/*.sublime-*
