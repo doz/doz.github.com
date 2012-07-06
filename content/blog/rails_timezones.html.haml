@@ -1,6 +1,6 @@
 ---
 kind: article
-created_at: 29 June 2012
+created_at: 6 July 2012
 title: The Exhaustive Guide to Rails Time Zones
 subtitle: Or what is the difference between Time.zone.now and Time.now
 ---
@@ -8,23 +8,260 @@ subtitle: Or what is the difference between Time.zone.now and Time.now
 %p
   Ruby and Rails provide great tools for working with time and time zones.
   But my experience shows that Rails developers often pay little attention to how this magic really works,
-  and this results in "ghost" problems that arise in particular configuration and time.
-  The main gotcha for developer is that you can use "wrong" methods and, in particular circumstances
-  (fairly often), get valid results. But then you'll face with unexpected problems on production.
+  which often results in "ghost" problems that arise in particular configuration and time.
+  The main gotcha for developer is that you can use "wrong" methods in development and fairly often
+  get valid results. But then you'll face with unexpected problems on production.
 %p
   Historically Ruby provides two classes to manage time:
   = succeed "." do
-    %code= link_to("Time", "http://www.ruby-doc.org/core-1.9.3/Time.html")
+    %code.well= link_to("Time", "http://www.ruby-doc.org/core-1.9.3/Time.html")
     and
-    %code= link_to("DateTime", "http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html")
+    %code.well= link_to("DateTime", "http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html")
   They use different approaches internally, which caused
   = succeed "." do
     = link_to("different abilities and performance for them", "http://stackoverflow.com/questions/1261329/whats-the-difference-between-datetime-and-time-in-ruby")
-  But with Ruby 1.9.3 these differences vanished and you are free to choose whatever interface you like.
-  But that's in Ruby! When it comes to Rails things get more complicated.
+  But with Ruby 1.9.3 these differences seem to be vanished and you are free to choose whatever interface you like.
+  But that's in Ruby! When it comes to Rails things get a bit more complicated.
 %p
-  Rails...
+  Rails gives your ability to configure application time zone. It's as easy as
+  = succeed "." do
+    %code.well Time.zone = 'EST'
+  Setting
+  %code.well config.time_zone
+  in your application.rb will eventually do the same. And this is the right thing to do since we
+  don't want to depend on server time zone. But the problem here that now we have 3 (!) different
+  time zones in our application: system time, application time and database time. And if you won't
+  use correct methods to deal with time all them get mixed up.
+
+%h2 What's the trick?
+
+%p
+  Let me give you an example. Let's say you have server in Moscow (GMT+04:00), but most of your
+  customers are from US and you use Eastern Standard Time (GMT-05:00) in your application.
+  For database Rails by default converts all timestamps to GMT. Let's try calling different methods
+  and compare the results.
+
 %pre.well
   %code.language-ruby
-    Time.zone.now
-    Time.now
+    :preserve
+      Time.zone = 'EST'
+      DateTime.now.to_s
+      # => "2012-07-06T13:30:00+04:00"
+      Time.now.to_s
+      # => "2012-07-06 13:30:00 +0400"
+      Time.zone.now.to_s
+      # => "2012-07-06 04:30:00 -0500"
+
+%p
+  You might notice that
+  %code.well DateTime.now
+  and
+  %code.well Time.now
+  both give you the time in system time zone. And it definitely makes sense since these are Ruby
+  standard library methods that know nothing about Rails time zone configuration.
+  %code.well Time.zone.now
+  on the contrary is provided by Rails and respects
+  %code.well Time.zone
+  value that we set in Rails.
+
+%p
+  But you might argue that if we convert all these values to one time zone they will be the same.
+  And you are right, if you try to save this time to ActiveRecord model or compare to another
+  value you will get expected results. Then what's the problem? Let's try some manipulations with time.
+
+%pre.well
+  %code.language-ruby
+    :preserve
+      Time.zone = 'EST'
+      Time.now.end_of_day.to_s
+      # => "2012-07-06 23:59:59 +0400"
+      Time.zone.now.end_of_day.to_s
+      # => "2012-07-06 23:59:59 -0500"
+
+%p
+  Whoops, by using different time zones in initial time we got completely different results.
+  That means that before we manipulate time we either need to explicitly convert time to
+  required time zone or initially get time in correct time zone. Like this:
+
+%pre.well
+  %code.language-ruby
+    :preserve
+      Time.zone = 'EST'
+      Time.now.in_time_zone.end_of_day.to_s
+      # => "2012-07-06 23:59:59 -0500"
+      Time.zone.now.end_of_day.to_s
+      # => "2012-07-06 23:59:59 -0500"
+
+%p
+  Here is another trick. Let's time travel to the next morning. What have we got here?
+
+%pre.well
+  %code.language-ruby
+    :preserve
+      Time.zone = 'EST'
+      Time.now.to_s
+      # => "2012-07-07 06:30:00 +0400"
+      Time.zone.now.to_s
+      # => "2012-07-06 21:30:00 -0500"
+      Date.today
+      # => "Fri, 07 Jul 2012"
+
+%p
+  But wait, application should still find itself in 6th of July since it uses EST time zone.
+  As you might have guessed,
+  %code.well Date.today
+  doesn't know anything about Rails time zone too and uses system time to determine current date.
+
+%p
+  So, when we know some troubles it might cause, let's find out which methods are safe to use.
+
+%h2 The Right Way to Go
+
+%p
+  You might have noticed from given examples that interesting construct
+  %code.well Time.zone
+  that seem to produce correct results.
+  So, what is it? Actually above I cheated for simplicity of introduction. It's not Rails responsible
+  for adding time zone, but ActiveSupport. It adds
+  %code.well= link_to("Time.zone=", "http://api.rubyonrails.org/classes/Time.html#method-c-zone-3D")
+  and
+  %code.well= link_to("Time.zone", "http://api.rubyonrails.org/classes/Time.html#method-c-zone")
+  methods to correspondingly set and get current time zone. If you look into source of these methods
+  you'll find that the first one finds requested
+  %code.well= link_to("ActiveSupport::TimeZone", "http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html")
+  object and stores it in the current thread, while the second one just fetches if from there.
+
+%p
+  So, it's
+  %code.well ActiveSupport::TimeZone
+  object where all the magic happens.
+  It defines number of methods that makes its API similar to the one of
+  %code.well Time
+  class. That's why from the user point of view it looks like a simple switch from
+  %code.well Time.now
+  to
+  = succeed "." do
+    %code.well Time.zone.now
+  But what actually happens in
+  %code.well Time.zone.now
+  method?
+  Turns out it simply grabs current time and converts it do current time zone (which is
+  = succeed ")." do
+    %code.well self
+
+%pre.well
+  %code.language-ruby
+    :preserve
+      class ActiveSupport::TimeZone
+        def now
+          Time.now.utc.in_time_zone(self)
+        end
+      end
+
+%p
+  And here is the last line of defense,
+  %code.well in_time_zone
+  method. It is added by ActiveSupport to both
+  %code.well= link_to("Time", "http://api.rubyonrails.org/classes/Time.html#method-i-in_time_zone")
+  and
+  %code.well= link_to("DateTime", "http://api.rubyonrails.org/classes/DateTime.html#method-i-in_time_zone")
+  Ruby standard library methods. In both cases it does the same - converts time to
+  %code.well= link_to("ActiveSupport::TimeWithZone", "http://api.rubyonrails.org/classes/ActiveSupport/TimeWithZone.html")
+  object passing specified time zone to it. This class behaves exactly like Ruby
+  %code.well Time
+  object, it even redefines class name. So you can manipulate it as you usually do in Ruby.
+
+%p
+  Now when we know what's under the hood, I will leave you with brief cheat sheet on correct and incorrect
+  methods for dealing with time in Ruby on Rails.
+
+%h3 Get Current Time
+
+= code_samples(correct: "Time.zone.now", acceptable: "Time.now.in_time_zone\nDateTime.now.in_time_zone", wrong: "Time.now\nDateTime.now")
+
+%p
+  You should now understand that wrong option will give you time in system time zone, which
+  might cause problems. Second (acceptable) option will work fine as it converts time to Rails
+  time zone. As we have seen above it is exactly what ActiveSupport is doing internally,
+  but there is no need to use it explicitly as there is shorter and more clear option.
+
+%h3 Get Day (Today, Yesterday, etc.)
+
+= code_samples(correct: "Time.zone.today\nTime.zone.today - 1.day", acceptable: "Date.current\nDate.yesterday", wrong: "Date.today")
+
+%p
+  ActiveSupport defines
+  %code.well Date.current
+  method that proxies call to
+  %code.well Time.zone.today
+  and it also redefines
+  %code.well Date.yesterday
+  and
+  %code.well Date.tomorrow
+  helpers. But I personally find them quite confusing and easier to be replaced with
+  %code.well Date.today
+  by mistake. So I prefer to use explicit version, but feel free to disagree here.
+
+%h3 Build Time
+
+= code_samples(correct: "Time.zone.local(2012, 6, 10, 12, 00)", wrong: "Time.new(2012, 6, 10, 12, 00)\nDateTime.new(2012, 6, 10, 12, 00)")
+
+%p
+  I believe this one doesn't need any comments as Ruby classes are simply not aware of the time zone in use.
+
+%h3 Time From Timestamp
+
+= code_samples(correct: "Time.zone.at(timestamp)", acceptable: "Time.at(timestamp).in_time_zone", wrong: "Time.at(timestamp)")
+
+%h3 Parse Time (Simple)
+
+= code_samples(correct: "Time.zone.parse(str)", wrong: "Time.parse(str)")
+
+%h3 Parse Time (With Explicit Format)
+
+= code_samples(acceptable: "DateTime.strptime(str, \"%Y-%m-%d %H:%M %Z\").in_time_zone", wrong: "DateTime.strptime(str, \"%Y-%m-%d %H:%M\")")
+
+%p
+  Here I have to make one important note. Correct option will give valid results only when time
+  string (and format of course) explicitly include time zone (note %Z in format string).
+  But there are cases when you need to parse time without specified time zone. In this case you
+  usually need to treat this time in current time zone. Unfortunately ActiveSupport doesn't
+  provide convenient means for this. To fill this gap you can use my micro gem
+  = link_to("TimeZoneExt", "https://github.com/doz/time_zone_ext")
+  that allows you to parse time with or without explicitly specified time zone.
+  This adds one more correct option.
+
+= code_samples(correct: "Time.zone.strptime(str, \"%Y-%m-%d %H:%M\")")
+
+%h3 Get Time For Date
+
+= code_samples(correct: "date.beginning_of_day", acceptable: "date.to_time_in_current_zone", wrong: "date.to_time")
+
+%p
+  Again, default
+  %code.well to_time
+  method provided by Ruby knows nothing about time zone in use. So you should use one of the
+  methods defined in ActiveSupport. I personally find
+  %code.well beginning_of_day
+  more explicit, although
+  %code.well to_time_in_current_zone
+  gives the same result.
+
+%h2 Conclusion
+
+%p
+  There is no rocket science in dealing with time in Rails. But it's a good idea to understand it once
+  and always keep in mind that when you build time or date object you should respect current time zone.
+  In most cases it simply means to use
+  %code.well Time.zone
+  instead of
+  = succeed "," do
+    %code.well Time
+  %code.well Date
+  or
+  = succeed "." do
+    %code.well DateTime
+
+%p
+  I do not cover dealing with other than default time zones in Rails. This post has another purpose.
+  But it is possible and quite easy to do. And now you have references to classes to look into.

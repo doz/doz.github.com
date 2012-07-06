@@ -45,6 +45,28 @@ pre.well {
   padding: 0;
 }
 
+code.well {
+  padding: 2px 5px;
+}
+
+.green {
+  background-color: #dff0d8;
+}
+
+.red {
+  background-color: #f2dede;
+}
+
+.yellow {
+  background-color: #fcf8e3;
+}
+
+.nolines {
+  .line-numbers {
+    display: none;
+  }
+}
+
 [class^="icon-"],[class*=" icon-"] { margin: 0 3px 1px 0; }
 .icon-linkedin, .icon-skype, .icon-facebook, .icon-twitter, .icon-github { background-image: url("/images/icons.png"); }
 .icon-linkedin { background-position: 0 0; }
