@@ -4564,6 +4564,10 @@ table.CodeRay {
   table.CodeRay .head .head {
     color: #f4f; }
 
+.navbar .navbar-inner {
+  margin-right: -20px;
+  margin-left: -20px; }
+
 .sidebar-nav {
   padding: 9px 0; }
 
@@ -4585,7 +4589,8 @@ table.CodeRay {
   font-size: 16px; }
 
 .page-header .subtitle {
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 25px; }
 
 .post-info {
   margin: 5px 0 15px 0; }
@@ -4593,8 +4598,13 @@ table.CodeRay {
     color: #999;
     font-size: 12px; }
 
+#disqus_thread {
+  margin: 40px 0; }
+
 pre.well {
   padding: 0; }
+  pre.well .label {
+    margin: 2px 4px; }
 
 code.well {
   padding: 2px 5px; }

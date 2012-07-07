@@ -1,6 +1,11 @@
 @import "bootstrap.css.scss";
 @import "coderay.css.scss";
 
+.navbar .navbar-inner {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
 .sidebar-nav {
   padding: 9px 0;
 }
@@ -30,6 +35,7 @@
 .page-header {
   .subtitle {
     font-size: 18px;
+    line-height: 25px;
   }
 }
 
@@ -41,8 +47,16 @@
   }
 }
 
+#disqus_thread {
+  margin: 40px 0;
+}
+
 pre.well {
   padding: 0;
+
+  .label {
+    margin: 2px 4px;
+  }
 }
 
 code.well {

@@ -9,6 +9,7 @@
     %meta{name: "generator", content: "nanoc #{Nanoc::VERSION}"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %link{rel: "alternate", type: "application/rss+xml", title: "Danilenko.org", href: "http://danilenko.org/feed.xml"}
+    = render "vendor/google_analytics"
   %body
     .navbar
       .navbar-inner
@@ -35,7 +36,7 @@
         .span3
           .well.sidebar-about
             .nav
-              .nav-header About
+              .nav-header About Author
             %img{src: "/images/danilenko.png", alt: "Alexander Danilenko", width: "80", height: "80"}
             %p
               Alexander is lead developer at
