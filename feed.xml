@@ -50,7 +50,7 @@ and
   and compare the results.
 &lt;/p&gt;
 &lt;pre class="well"&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;
 &lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;
@@ -84,7 +84,7 @@ and
   value you will get expected results. Then what's the problem? Let's try some manipulations with time.
 &lt;/p&gt;
 &lt;pre class="well"&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;
 &lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;
@@ -102,7 +102,7 @@ and
   required time zone or initially get time in correct time zone. Like this:
 &lt;/p&gt;
 &lt;pre class="well"&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;
 &lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;
@@ -118,7 +118,7 @@ and
   Here is another trick. Let's time travel to the next morning. What have we got here?
 &lt;/p&gt;
 &lt;pre class="well"&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;
 &lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;
@@ -175,7 +175,7 @@ and
   &lt;code class="well"&gt;self&lt;/code&gt;).
 &lt;/p&gt;
 &lt;pre class="well"&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;a href="#n3" name="n3"&gt;3&lt;/a&gt;
 &lt;a href="#n4" name="n4"&gt;4&lt;/a&gt;
@@ -206,17 +206,17 @@ and
 &lt;/p&gt;
 &lt;h3&gt;Get Current Time&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.zone.now&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-warning"&gt;Acceptable&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.now.in_time_zone
 &lt;span class="constant"&gt;DateTime&lt;/span&gt;.now.in_time_zone&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.now
@@ -230,19 +230,19 @@ and
 &lt;/p&gt;
 &lt;h3&gt;Get Day (Today, Yesterday, etc.)&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.zone.today
 &lt;span class="constant"&gt;Time&lt;/span&gt;.zone.today - &lt;span class="integer"&gt;1&lt;/span&gt;.day&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-warning"&gt;Acceptable&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Date&lt;/span&gt;.current
 &lt;span class="constant"&gt;Date&lt;/span&gt;.yesterday&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Date&lt;/span&gt;.today&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -261,11 +261,11 @@ and
 &lt;/p&gt;
 &lt;h3&gt;Build Time&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.zone.local(&lt;span class="integer"&gt;2012&lt;/span&gt;, &lt;span class="integer"&gt;6&lt;/span&gt;, &lt;span class="integer"&gt;10&lt;/span&gt;, &lt;span class="integer"&gt;12&lt;/span&gt;, &lt;span class="integer"&gt;00&lt;/span&gt;)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;a href="#n2" name="n2"&gt;2&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.new(&lt;span class="integer"&gt;2012&lt;/span&gt;, &lt;span class="integer"&gt;6&lt;/span&gt;, &lt;span class="integer"&gt;10&lt;/span&gt;, &lt;span class="integer"&gt;12&lt;/span&gt;, &lt;span class="integer"&gt;00&lt;/span&gt;)
@@ -276,35 +276,35 @@ and
 &lt;/p&gt;
 &lt;h3&gt;Time From Timestamp&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.zone.at(timestamp)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-warning"&gt;Acceptable&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.at(timestamp).in_time_zone&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.at(timestamp)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Parse Time (Simple)&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.zone.parse(str)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.parse(str)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Parse Time (With Explicit Format)&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-warning"&gt;Acceptable&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;DateTime&lt;/span&gt;.strptime(str, &lt;span class="string"&gt;&lt;span class="delimiter"&gt;"&lt;/span&gt;&lt;span class="content"&gt;%Y-%m-%d %H:%M %Z&lt;/span&gt;&lt;span class="delimiter"&gt;"&lt;/span&gt;&lt;/span&gt;).in_time_zone&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;DateTime&lt;/span&gt;.strptime(str, &lt;span class="string"&gt;&lt;span class="delimiter"&gt;"&lt;/span&gt;&lt;span class="content"&gt;%Y-%m-%d %H:%M&lt;/span&gt;&lt;span class="delimiter"&gt;"&lt;/span&gt;&lt;/span&gt;)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -319,21 +319,21 @@ and
   This adds one more correct option.
 &lt;/p&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;&lt;span class="constant"&gt;Time&lt;/span&gt;.zone.strptime(str, &lt;span class="string"&gt;&lt;span class="delimiter"&gt;"&lt;/span&gt;&lt;span class="content"&gt;%Y-%m-%d %H:%M&lt;/span&gt;&lt;span class="delimiter"&gt;"&lt;/span&gt;&lt;/span&gt;)&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Get Time For Date&lt;/h3&gt;
 &lt;pre class="well nolines"&gt;&lt;span class="label label-success"&gt;Correct&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;date.beginning_of_day&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-warning"&gt;Acceptable&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;date.to_time_in_current_zone&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;span class="label label-important"&gt;Wrong&lt;/span&gt;&lt;code class="language-ruby"&gt;&lt;table class="CodeRay"&gt;&lt;tr&gt;
-&lt;td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"&gt;&lt;pre&gt;
+  &lt;td class="line-numbers"&gt;&lt;pre&gt;&lt;a href="#n1" name="n1"&gt;1&lt;/a&gt;
 &lt;/pre&gt;&lt;/td&gt;
   &lt;td class="code"&gt;&lt;pre&gt;date.to_time&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -362,6 +362,7 @@ and
 &lt;p&gt;
   I do not cover dealing with other than default time zones in Rails. This post has another purpose.
   But it is possible and quite easy to do. And now you have references to classes to look into.
-&lt;/p&gt;</content>
+&lt;/p&gt;
+</content>
   </entry>
 </feed>

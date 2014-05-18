@@ -89,7 +89,7 @@ and
   and compare the results.
 </p>
 <pre class="well"><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 <a href="#n3" name="n3">3</a>
 <a href="#n4" name="n4">4</a>
@@ -123,7 +123,7 @@ and
   value you will get expected results. Then what's the problem? Let's try some manipulations with time.
 </p>
 <pre class="well"><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 <a href="#n3" name="n3">3</a>
 <a href="#n4" name="n4">4</a>
@@ -141,7 +141,7 @@ and
   required time zone or initially get time in correct time zone. Like this:
 </p>
 <pre class="well"><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 <a href="#n3" name="n3">3</a>
 <a href="#n4" name="n4">4</a>
@@ -157,7 +157,7 @@ and
   Here is another trick. Let's time travel to the next morning. What have we got here?
 </p>
 <pre class="well"><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 <a href="#n3" name="n3">3</a>
 <a href="#n4" name="n4">4</a>
@@ -214,7 +214,7 @@ and
   <code class="well">self</code>).
 </p>
 <pre class="well"><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 <a href="#n3" name="n3">3</a>
 <a href="#n4" name="n4">4</a>
@@ -245,17 +245,17 @@ and
 </p>
 <h3>Get Current Time</h3>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.zone.now</pre></td>
 </tr></table></code><span class="label label-warning">Acceptable</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.now.in_time_zone
 <span class="constant">DateTime</span>.now.in_time_zone</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.now
@@ -269,19 +269,19 @@ and
 </p>
 <h3>Get Day (Today, Yesterday, etc.)</h3>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.zone.today
 <span class="constant">Time</span>.zone.today - <span class="integer">1</span>.day</pre></td>
 </tr></table></code><span class="label label-warning">Acceptable</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Date</span>.current
 <span class="constant">Date</span>.yesterday</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Date</span>.today</pre></td>
 </tr></table></code></pre>
@@ -300,11 +300,11 @@ and
 </p>
 <h3>Build Time</h3>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.zone.local(<span class="integer">2012</span>, <span class="integer">6</span>, <span class="integer">10</span>, <span class="integer">12</span>, <span class="integer">00</span>)</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre><a href="#n1" name="n1">1</a>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 <a href="#n2" name="n2">2</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.new(<span class="integer">2012</span>, <span class="integer">6</span>, <span class="integer">10</span>, <span class="integer">12</span>, <span class="integer">00</span>)
@@ -315,35 +315,35 @@ and
 </p>
 <h3>Time From Timestamp</h3>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.zone.at(timestamp)</pre></td>
 </tr></table></code><span class="label label-warning">Acceptable</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.at(timestamp).in_time_zone</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.at(timestamp)</pre></td>
 </tr></table></code></pre>
 <h3>Parse Time (Simple)</h3>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.zone.parse(str)</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.parse(str)</pre></td>
 </tr></table></code></pre>
 <h3>Parse Time (With Explicit Format)</h3>
 <pre class="well nolines"><span class="label label-warning">Acceptable</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">DateTime</span>.strptime(str, <span class="string"><span class="delimiter">"</span><span class="content">%Y-%m-%d %H:%M %Z</span><span class="delimiter">"</span></span>).in_time_zone</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">DateTime</span>.strptime(str, <span class="string"><span class="delimiter">"</span><span class="content">%Y-%m-%d %H:%M</span><span class="delimiter">"</span></span>)</pre></td>
 </tr></table></code></pre>
@@ -358,21 +358,21 @@ and
   This adds one more correct option.
 </p>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre><span class="constant">Time</span>.zone.strptime(str, <span class="string"><span class="delimiter">"</span><span class="content">%Y-%m-%d %H:%M</span><span class="delimiter">"</span></span>)</pre></td>
 </tr></table></code></pre>
 <h3>Get Time For Date</h3>
 <pre class="well nolines"><span class="label label-success">Correct</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre>date.beginning_of_day</pre></td>
 </tr></table></code><span class="label label-warning">Acceptable</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre>date.to_time_in_current_zone</pre></td>
 </tr></table></code><span class="label label-important">Wrong</span><code class="language-ruby"><table class="CodeRay"><tr>
-<td class="line-numbers" title="double click to toggle" ondblclick="with (this.firstChild.style) { display = (display == '') ? 'none' : '' }"><pre>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
 </pre></td>
   <td class="code"><pre>date.to_time</pre></td>
 </tr></table></code></pre>
