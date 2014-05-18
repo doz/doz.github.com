@@ -1,0 +1,30 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    adsf (1.2.0)
+      rack (>= 1.0.0)
+    builder (3.2.2)
+    coderay (1.1.0)
+    colored (1.2)
+    cri (2.6.0)
+      colored (~> 1.2)
+    haml (3.1.6)
+    mini_portile (0.6.0)
+    nanoc (3.4.0)
+      cri (~> 2.2)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
+    rack (1.5.2)
+    sass (3.1.21)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  builder
+  coderay
+  haml (~> 3.1.6)
+  nanoc (= 3.4.0)
+  nokogiri
+  sass (~> 3.1.20)
