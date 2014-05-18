@@ -8,6 +8,13 @@
 
 .sidebar-nav {
   padding: 9px 0;
+
+  .toptal {
+    margin-top: 10px;
+    font-size: 14px;
+
+    a { text-decoration: underline; }
+  }
 }
 
 .sidebar-about {

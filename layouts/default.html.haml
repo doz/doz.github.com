@@ -49,6 +49,9 @@
                 %li.nav-header Blog Posts
                 - @site.sorted_articles.each do |post|
                   %li= link_to post[:title], post.path
+                %li.toptal
+                  For more high-quality posts check out
+                  %a{href: "http://www.toptal.com/blog"} blog at toptal.com
       %hr/
       %footer
         %p.footer-social
