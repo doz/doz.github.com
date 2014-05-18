@@ -56,7 +56,7 @@ route '/javascripts/*/' do
 end
 
 route '/support/*/' do
-  "/#{item.identifier.split('/').last.sub(/^~/, '.')}"
+  "/#{[item.identifier.split('/').last.sub(/^~/, '.'), item[:extension]].compact.join('.')}"
 end
 
 route '/vendor/*/' do
