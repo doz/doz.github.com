@@ -4570,11 +4570,18 @@ table.CodeRay {
 
 .sidebar-nav {
   padding: 9px 0; }
+  .sidebar-nav .toptal {
+    margin-top: 10px;
+    font-size: 14px; }
+    .sidebar-nav .toptal a {
+      text-decoration: underline; }
 
 .sidebar-about {
   position: relative;
   overflow: hidden;
-  padding: 9px 15px; }
+  padding: 9px 15px;
+  font-size: 14px;
+  line-height: 16px; }
   .sidebar-about .nav {
     margin: 0; }
     .sidebar-about .nav .nav-header {
